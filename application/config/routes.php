@@ -58,4 +58,10 @@ $route['site-about'] = 'site/about';
 $route['site-index'] = 'site/index';
 $route['site-home'] = 'site/home';
 $route['site-site'] = 'site/site';
-$route['site-service'] = 'site/service';
+$route['site-service/(:num)/(:name)'] = 'site/service/$1/$2';
+// $route['site-service'] = 'site/service';
+$route['site-variable'] = 'site/variable';
+$route['load-model'] = 'site/loadModel';
+
+//CRUD routes
+$route['create-user'] = 'UserController/store';
