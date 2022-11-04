@@ -17,4 +17,22 @@ class UserController extends CI_Controller {
 		// $this->load->view('welcome_message');
 		echo $this->UserModel->insertData($user_data);
 	}
+
+	public function userList() {
+		$data = $this->UserModel->userList();
+		echo '<pre>';
+			print_r($data);
+		echo '</pre>';
+	}
+
+	public function updateData() {
+		$user_data = [
+			// 'id' => 1,
+			'name' => 'Xipetech Lucknow Updated',
+			'email' => 'shamshi@xipetech.com',
+			'phone' => '(+91) 111-999-1111',
+		];
+
+		echo $this->UserModel->updateData($user_data);
+	}
 }

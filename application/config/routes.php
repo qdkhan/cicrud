@@ -65,3 +65,5 @@ $route['load-model'] = 'site/loadModel';
 
 //CRUD routes
 $route['create-user'] = 'UserController/store';
+$route['get-data-user'] = 'UserController/userList';
+$route['update-user'] = 'UserController/updateData';
